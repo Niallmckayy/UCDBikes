@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Boldly Navigating Nature</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://kit.fontawesome.com/ac147dd639.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script type="module" src="./geo_index.js"></script>
-  </head>
-  <body>
-
-    <body id="home">
-      <!-- Navbar -->
-      <nav id="navbar">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map with Info Column</title>
+</head>
+<body>
+    <nav id="navbar">
         <h1 class="logo">
           <span class="text-primary"> <i class="fas fa-bicycle"></i> Boldly </span
           >Navigating Nature
@@ -24,9 +24,15 @@
         </ul>
       </nav>
 
-    <div id="map"></div>
+    <div class="info-container">
+        <div id="info-column">
+            <h2>Information Column</h2>
+            <p>This is the information column. It takes up 30% of the width.</p>
+        </div>
 
-    <!-- 
+        <div id="map"></div>
+
+        <!-- 
       The `defer` attribute causes the callback to execute after the full HTML
       document has been parsed. For non-blocking uses, avoiding race conditions,
       and consistent behavior across browsers, consider loading using Promises.
@@ -34,13 +40,14 @@
       for more information.
       -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMP-D_lSKcqEIldSO4LYi_1NdYEvw71eI&callback=initMap&v=weekly"
-      defer
-    ></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMP-D_lSKcqEIldSO4LYi_1NdYEvw71eI&callback=initMap&v=weekly"
+    defer
+  ></script>
 
-    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+  <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+
+    </div>
+
     
-  </body>
+</body>
 </html>
-<!-- [END maps_map_geolocation] -->
-

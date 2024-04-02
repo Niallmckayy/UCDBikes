@@ -2,6 +2,7 @@
 let map, infoWindow;
 import { MarkerClusterer } from "https://cdn.skypack.dev/@googlemaps/markerclusterer@2.3.1";
 
+
 async function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 12,
@@ -83,7 +84,6 @@ async function initMap() {
 
 
 
-
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
   infoWindow.setContent(
@@ -153,9 +153,6 @@ const tourStops = [
   
   
 ];
-
-initMap();
-
 
 window.initMap = initMap;
 
