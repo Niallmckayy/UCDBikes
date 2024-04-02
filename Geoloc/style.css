@@ -1,0 +1,292 @@
+/* 
+ * Map Page 
+ */
+ #map {
+    height: 100%;
+    width: 70%;
+  }
+
+  .info-container {
+   position: sticky;
+   display: flex;
+   height: 100%;
+}
+
+#info-column {
+   width: 30%;
+   background-color: #93cb52;
+   padding: 20px;
+}
+  
+  /* 
+   * Optional: Makes the sample page fill the window. 
+   */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
+
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+a{
+   text-decoration: none;
+}
+
+p{
+   padding: 0.75rem 0;
+}
+
+/* Utility Class */
+.text-primary{
+   color: #93cb52;
+}
+.text-center{
+   text-align: center;
+}
+.l-heading{
+   font-size: 4rem;
+   margin-bottom: 0.75rem;
+}
+.m-heading{
+   font-size: 2rem;
+   margin-bottom: 0.75rem;
+   padding: 1.5rem 0;
+}
+.lead{
+   font-size: 1.3rem;
+   margin-bottom: 1.4rem;
+}
+.container{
+   max-width: 1500px;
+   padding: 0 2rem;
+   margin: auto;
+   overflow: auto;
+}
+.btn{
+   color: #ffffff;
+   background-color: #93cb52;
+   padding: 0.75rem 2rem;
+   border: none;
+   border-radius: 5px;
+}
+.btn:hover{
+   background-color: #7ab436;
+}
+
+/* Navbar */
+#navbar{
+   display: flex;
+   background-color: #333333;
+   justify-content: space-between;
+   color: #ffffff;
+   position: sticky;
+   top: 0;
+   z-index: 100;
+   padding: 1rem;
+}
+
+#navbar ul{
+   display: flex;
+   list-style: none;
+   align-items: center;
+}
+
+#navbar ul li a{
+   color: #ffffff;
+   padding: 0.75rem;
+   margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover{
+   background-color: #93cb52;
+   border-radius: 5px;
+}
+
+/* Showcase */
+#showcase{
+   background: url('../images/dublin.jpg') no-repeat center center/cover;
+   color: #ffffff;
+   height: 100vh;
+}
+
+#showcase .showcase-content{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   padding: 0 2rem;
+   background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* What We Do */
+#what .items{
+   display: flex;
+   flex: 1;
+}
+
+#what .items .item{
+   text-align: center;
+   padding: 2rem;
+   font-size: 1.2rem;
+}
+
+#what .items .item i{
+   background-color: #93cb52;
+   padding: 1rem;
+   margin-bottom: 1rem;
+   border-radius: 50%;
+}
+
+/* Who We Are */
+#who{
+   display: flex;
+}
+
+#who div{
+   flex: 1;
+}
+
+#who .who-img{
+   background: url('../images/people.jpg') no-repeat center center/cover;
+}
+
+#who .who-text{
+   padding: 1.5rem;
+   background-color: #333333;
+   color: #ffffff;
+}
+#who .who-text ul{
+   list-style: none;
+   margin: 1rem 0;
+   text-align: center;
+}
+
+#who .who-text ul li{
+   /* margin: 0.5rem 0 */
+   padding: 0.5rem 0;
+   border-bottom: 1px dotted #444;
+}
+
+/* Footer */
+#main-footer{
+   background-color: #333333;
+   color: #ffffff;
+   text-align: center;
+   padding: 0.75rem 0;
+}
+
+/* Map Page*/ 
+
+#info-box {
+   width: 30%;
+   float: left;
+   padding: 20px;
+   box-sizing: border-box;
+}
+
+
+.custom-map-control-button {
+   background-color: #fff;
+   border: 0;
+   border-radius: 2px;
+   box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+   margin: 10px;
+   padding: 0 0.5em;
+   font: 400 18px Roboto, Arial, sans-serif;
+   overflow: hidden;
+   height: 40px;
+   cursor: pointer;
+ }
+ .custom-map-control-button:hover {
+   background: rgb(235, 235, 235);
+ }
+
+ /* Styling for Autocomplete search bar */
+ #pac-card {
+   background-color: #fff;
+   border-radius: 2px 0 0 2px;
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+   box-sizing: border-box;
+   font-family: Roboto;
+   margin: 10px 10px 0 0;
+   -moz-box-sizing: border-box;
+   outline: none;
+ }
+ 
+ #pac-container {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   margin-right: 12px;
+ }
+ 
+ #pac-input {
+   background-color: #fff;
+   font-family: Roboto;
+   font-size: 15px;
+   font-weight: 300;
+   margin-left: 12px;
+   padding: 0 11px 0 13px;
+   text-overflow: ellipsis;
+   width: 400px;
+ }
+ 
+ #pac-input:focus {
+   border-color: #4d90fe;
+ }
+ 
+ #title {
+   color: #fff;
+   background-color: #acbcc9;
+   font-size: 18px;
+   font-weight: 400;
+   padding: 6px 12px;
+ }
+ 
+ .hidden {
+   display: none;
+ }
+
+ /* Styling for an info pane that slides out from the left. 
+     * Hidden by default. */
+     #panel {
+      height: 100%;
+      width: null;
+      background-color: white;
+      position: fixed;
+      z-index: 1;
+      overflow-x: hidden;
+      transition: all .2s ease-out;
+    }
+    
+    .open {
+      width: 250px;
+    }
+    
+    .place {
+      font-family: 'open sans', arial, sans-serif;
+      font-size: 1.2em;
+      font-weight: 500;
+      margin-block-end: 0px;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+    
+    .distanceText {
+      color: silver;
+      font-family: 'open sans', arial, sans-serif;
+      font-size: 1em;
+      font-weight: 400;
+      margin-block-start: 0.25em;
+      padding-left: 18px;
+      padding-right: 18px;
+    }

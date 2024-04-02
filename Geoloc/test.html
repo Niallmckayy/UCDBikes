@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Boldly Navigating Nature</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://kit.fontawesome.com/ac147dd639.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./geo_index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map with Info Column</title>
+</head>
+<body>
+    <nav id="navbar">
+        <h1 class="logo">
+          <span class="text-primary"> <i class="fas fa-bicycle"></i> Boldly </span
+          >Navigating Nature
+        </h1>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#what">What</a></li>
+          <li><a href="#who">Who</a></li>
+          <li><a href="./map_1.html">Map</a></li>
+        </ul>
+      </nav>
+
+    <div class="info-container">
+        <div id="info-column">
+            <h2>Information Column</h2>
+            <p>This is the information column. It takes up 30% of the width.</p>
+        </div>
+
+        <div id="map"></div>
+
+        <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises.
+      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMP-D_lSKcqEIldSO4LYi_1NdYEvw71eI&callback=initMap&v=weekly"
+    defer
+  ></script>
+
+  <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+
+    </div>
+
+    
+</body>
+</html>
